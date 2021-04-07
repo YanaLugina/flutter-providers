@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "first_name": "Konstantine",
+      "last_name": "Kolobok",
+      "website": "youtube.com"
+    },
+    {
+      "first_name": "User2",
+      "last_name": "Kolobok2",
+      "website": "google.com"
+    },
+    {
+      "first_name": "User3",
+      "last_name": "Kolobok3",
+      "website": "drom.ru"
+    },
+    {
+      "first_name": "User4",
+      "last_name": "Kolobok4",
+      "website": "japancar.ru"
+    }
+  ]
+}
