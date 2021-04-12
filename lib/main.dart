@@ -29,9 +29,9 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [
-          ChangeNotifierProvider<MyCountProvider>.value(value: MyCountProvider())
-        ],
+      providers: [
+        ChangeNotifierProvider<MyCountProvider>.value(value: MyCountProvider()),
+      ],
       child: DefaultTabController(
         length: 2,
         child: DefaultTabController(
@@ -44,7 +44,7 @@ class MyHomePage extends StatelessWidget {
                   tabs: <Widget>[
                     Tab(icon: Icon(Icons.add),),
                     Tab(icon: Icon(Icons.person),),
-                    Tab(icon: Icon(Icons.message),),
+                    /*Tab(icon: Icon(Icons.message),),*/
                   ],
                 ),
               ),

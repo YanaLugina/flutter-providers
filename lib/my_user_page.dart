@@ -8,9 +8,9 @@ class MyUserPage extends StatelessWidget {
         Padding(
           padding: EdgeInsets.all(10.0),
           child: Text(
-            'FutureProvider Example, users loadedfrom a file',
+            'FutureProvider Example, users loaded from a file',
             style: TextStyle(
-              fontSize: 60
+              fontSize: 40
             ),
           ),
         ),
