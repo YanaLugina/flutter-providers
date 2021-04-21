@@ -1,7 +1,7 @@
 import 'user.dart';
 
 class UserList {
-  final List<User> users;
+  List<User> users;
   UserList(this.users);
 
   UserList.fromJson(List<dynamic> usersJson)

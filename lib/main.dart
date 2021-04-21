@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_provider_example/count_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'models/user.dart';
 import 'my_count_page.dart';
 import 'my_user_page.dart';
+import 'user_provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,6 +33,10 @@ class MyHomePage extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<MyCountProvider>.value(value: MyCountProvider()),
+        FutureProvider<List<User>>(
+          create: (_) async => UserProvider().loadUserData(),
+          initialData: [],
+        ),
       ],
       child: DefaultTabController(
         length: 2,
