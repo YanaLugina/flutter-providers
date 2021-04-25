@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_provider_example/count_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'event_provider.dart';
 import 'models/user.dart';
 import 'my_count_page.dart';
+import 'my_event_page.dart';
 import 'my_user_page.dart';
 import 'user_provider.dart';
 
@@ -37,11 +39,15 @@ class MyHomePage extends StatelessWidget {
           create: (_) async => UserProvider().loadUserData(),
           initialData: [],
         ),
+        StreamProvider(
+            create: (_) => EventProvider().intStream(),
+            initialData: 0
+        ),
       ],
       child: DefaultTabController(
-        length: 2,
+        length: 3,
         child: DefaultTabController(
-            length: 2,
+            length: 3,
             child: Scaffold(
               appBar: AppBar(
                 title: Text("Provider Demo"),
@@ -50,7 +56,7 @@ class MyHomePage extends StatelessWidget {
                   tabs: <Widget>[
                     Tab(icon: Icon(Icons.add),),
                     Tab(icon: Icon(Icons.person),),
-                    /*Tab(icon: Icon(Icons.message),),*/
+                    Tab(icon: Icon(Icons.message),),
                   ],
                 ),
               ),
@@ -58,7 +64,7 @@ class MyHomePage extends StatelessWidget {
                 children: <Widget>[
                   MyCountPage(),
                   MyUserPage(),
-                  /*MyEventPage(),*/
+                  MyEventPage(),
                 ],
               ), // This trailing comma makes auto-formatting nicer for build methods.
             )
