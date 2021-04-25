@@ -28,7 +28,7 @@ class MyUserPage extends StatelessWidget {
                         color: Colors.grey[(index * 200) % 400],
                         child: Center(
                           child: Text(
-                              'User ${users[index].firstName} ${users[index].lastName}'
+                              '${users[index].firstName} ${users[index].lastName}, website: ${users[index].website}'
                           ),
                         ),
                       );
